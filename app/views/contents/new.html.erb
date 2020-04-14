@@ -1,0 +1,7 @@
+<%= form_for @content, method: :post do |f| %>
+  <h1>新規投稿</h1>
+  <p>いつ：<%= f.text_field :when %></p>
+  <p>なに：<%= f.text_field :what %></p>
+  <p>いくら：<%= f.text_field :how %></p>
+  <input type="submit" value="登録する">
+<% end %>
