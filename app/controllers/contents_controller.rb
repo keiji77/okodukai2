@@ -1,5 +1,5 @@
 class ContentsController < ApplicationController
-  before_action :move_to_index, except :index
+  before_action :move_to_index, except: :index
 
 
   def index
@@ -17,6 +17,7 @@ class ContentsController < ApplicationController
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
+
 
   private
     def content_params

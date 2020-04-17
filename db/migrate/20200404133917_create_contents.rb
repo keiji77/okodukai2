@@ -4,7 +4,8 @@ class CreateContents < ActiveRecord::Migration[6.0]
       t.date :when
       t.string :what
       t.integer :how
-
+      t.integer :user_id
+      
       t.timestamps
     end
   end
