@@ -11,9 +11,9 @@ class ContentsController < ApplicationController
   end
 
   def create
-    Content.create(when: content_params[:when], what: content_params[:what], how: content_params[:how])
+    Content.create(content_params)
   end
-
+  
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end

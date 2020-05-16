@@ -1,6 +1,6 @@
 <%= form_for @content, method: :post do |f| %>
   <h1>新規投稿</h1>
-  <p>いつ：<%= f.text_field :when %></p>
+  <p>いつ：<%= f.date_select :when, start_year: 2015, end_year: Time.current.year, use_month_number: true %></p>
   <p>なに：<%= f.text_field :what %></p>
   <p>いくら：<%= f.text_field :how %></p>
   <input type="submit" value="登録する">
